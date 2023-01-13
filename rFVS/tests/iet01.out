@@ -1,0 +1,1149 @@
+
+
+         FOREST VEGETATION SIMULATOR     VERSION 4004 -- BC                                     RV:20220701    11-24-2022  14:43:44
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+                                                OPTIONS SELECTED BY INPUT
+
+KEYWORD FILE NAME: iet01
+----------------------------------------------------------------------------------------------------------------------------------
+KEYWORD    PARAMETERS:
+--------   -----------------------------------------------------------------------------------------------------------------------
+
+SCREEN     SUMMARY TABLE WILL BE PRINTED TO DATA SET REFERENCE NUMBER     6 AS RUN PROGRESSES.
+
+NOAUTOES   TALLIES AND INGROWTH WILL NOT BE ADDED AUTOMATICALLY.
+           NO SPROUTING WILL BE SIMULATED.
+
+STATS      STATISTICAL DESCRIPTION OF INPUT DATA WILL BE PROVIDED; CONFIDENCE LIMITS AT 0.05 LEVEL.
+
+STDIDENT
+           STAND ID= S248112                            UNTHINNED CONTROL.                                                     
+
+MGMTID  
+           MANAGEMENT ID= NONE
+
+DESIGN     BASAL AREA FACTOR=    9.2; INVERSE OF FIXED PLOT AREA=  741.3; BREAK DBH=   12.7
+           NUMBER OF PLOTS=    11; NON-STOCKABLE PLOTS=     1; STAND SAMPLING WEIGHT=    11.00000
+           PROPORTION OF STAND CONSIDERED STOCKABLE=  0.909
+           SEE "OPTIONS SELECTED BY DEFAULT" FOR FINAL DESIGN VALUES.
+
+********   FVS03 WARNING:  FOREST CODE INDICATES THE GEOGRAPHIC LOCATION IS OUTSIDE THE RANGE OF THE MODEL.  DEFAULT CODE IS USED.
+
+STDINFO    BEC=ICHmw2/01      ; AGE=   60; ASPECT AZIMUTH IN DEGREES= 315.; SLOPE=  30.%
+           ELEVATION (M)=   34.0; REFERENCE CODE=     
+
+INVYEAR    INVENTORY YEAR= 1990
+
+NUMCYCLE   NUMBER OF CYCLES= 10
+
+DATABASE   DATABASE KEYWORDS:
+
+DSNOUT     DSN FOR OUTPUT DATA BASE IS iet01_Out.db
+
+SUMMARY    SUMMARY STATISTICS SENT TO DATABASE.
+
+INVSTATS   INVENTORY STATISTICS TABLES SENT TO SPECIFIED DATABASE.
+
+REGREPTS   REGENERATION TABLES SENT TO SPECIFIED DATABASE.
+
+STRCLSDB   STRUCTURE CLASS INFO SENT TO SPECIFIED DATABASE.
+           INCLUDE REPORT IN OUT FILE: YES
+           DATABASE TABLE AND STANDARD OUTPUT ARE GENERATED
+
+TREELIDB   TREE INFORMATION FROM OUTPUT SENT TO SPECIFIED DATABASE.
+           CREATE TEXT FILE REPORT: YES
+           SPECIES CODE OUTPUT FORMAT: NORMAL  
+
+CUTLIDB    CUTS INFORMATION FROM OUTPUT SENT TO SPECIFIED DATABASE.
+           SPECIES CODE OUTPUT FORMAT: NORMAL  
+           CREATE TEXT FILE REPORT: YES
+
+ATRTLIDB   TREE INFORMATION FROM OUTPUT SENT TO SPECIFIED DATABASE.
+           SPECIES CODE OUTPUT FORMAT: NORMAL  
+           CREATE TEXT FILE REPORT: YES
+
+MISRPTS    MISTLETOE INFORMATION FROM OUTPUT SENT TO SPECIFIED DATABASE.
+           CREATE TEXT FILE REPORTS: YES
+
+END        END OF DATA BASE OPTIONS.
+
+
+            
+
+STATS      STATISTICAL DESCRIPTION OF INPUT DATA WILL BE PROVIDED; CONFIDENCE LIMITS AT 0.05 LEVEL.
+
+STRCLASS   STAND STRUCTURAL CLASSES WILL BE COMPUTED.
+           OUTPUT PRINTING CODE =  1. (0=NO OUTPUT, 1=PRINT)
+           THE PERCENTAGE OF A TREE HEIGHT THAT A GAP MUST EXCEED =          30.0
+           THE DBH BREAK BETWEEN SEEDLING/SAPLINGS AND POLE-SIZED TREES =     5.0
+           THE DBH BREAK BETWEEN POLE-SIZED AND LARGE, OLDER, TREES =        25.0
+           THE MINIMUM COVER PERCENT TO QUALIFY A POTENTIAL STRATUM =         5.0
+           THE MINIMUM TREE/HA TO BE CLASSIFIED STAND INITIATION =          200.0
+           THE MINIMUM PERCENT OF MAXSDI TO BE CLASSIFIED STEM EXCLUSION =   30.0
+
+TREELIST   DATE/CYCLE=    0; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+CUTLIST    DATE/CYCLE=    0; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+ATRTLIST   DATE/CYCLE=    0; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+
+            
+
+MISTOE     MISTLETOE KEYWORDS:
+
+MISTPRT    Print mistletoe summary output; DMRs and DMIs calculated for trees with DBH >= 1.0
+
+MISTABLE   Date/Cycle=    0; Species= ALL (  0)
+
+END        End of mistletoe keywords.
+
+TREEFMT 
+          (T24,I4,T1,I4,T31,F2.0,I1,A3,F3.1,F2.1,T45,F3.0,T63,F3.0,T60,F3.1,T48,I1,       
+          T52,I2,T66,5I1,T54,7I1,T75,F3.0)                                                
+
+TREEDATA   DATA SET REFERENCE NUMBER=  2
+
+
+           NOTE: INPUT SPECIES CODE (LP      ) WAS SET TO (OC  ) FOR THIS PROJECTION.
+           NOTE: INPUT SPECIES CODE (DF      ) WAS SET TO (OC  ) FOR THIS PROJECTION.
+           NOTE: INPUT SPECIES CODE (WH      ) WAS SET TO (OC  ) FOR THIS PROJECTION.
+           NOTE: INPUT SPECIES CODE (L       ) WAS SET TO (LW  ) FOR THIS PROJECTION.
+           NOTE: INPUT SPECIES CODE (PP      ) WAS SET TO (OC  ) FOR THIS PROJECTION.
+           NOTE: INPUT SPECIES CODE (GF      ) WAS SET TO (OC  ) FOR THIS PROJECTION.
+           NOTE: INPUT SPECIES CODE (S       ) WAS SET TO (SE  ) FOR THIS PROJECTION.
+
+ECHOSUM    SUMMARY OUTPUT WILL BE WRITTEN TO FILE REFERENCED BY NUMBER  4
+
+PROCESS    PROCESS THE STAND.
+----------------------------------------------------------------------------------------------------------------------------------
+
+                                                OPTIONS SELECTED BY DEFAULT
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+DESIGN     BASAL AREA FACTOR=    9.2; INVERSE OF FIXED PLOT AREA=  741.3; BREAK DBH=   12.7
+           NUMBER OF PLOTS=    11; NON-STOCKABLE PLOTS=     1; STAND SAMPLING WEIGHT=    11.00000
+           PROPORTION OF STAND CONSIDERED STOCKABLE=  0.909
+            STAND ATTRIBUTES ARE CALCULATED PER HA OF STOCKABLE AREA.  STAND STATISTICS
+            IN SUMMARY TABLE ARE MULTIPLIED BY 0.909TO INCLUDE TOTAL STAND AREA.
+
+STDINFO    BEC=ICHmw2/01      ; AGE=   60; ASPECT AZIMUTH IN DEGREES= 315.; SLOPE=  30.%
+           ELEVATION (M)=   34.0; REFERENCE CODE=     
+
+ MAXIMUM BASAL AREA FOR ICHmw2/01      IS SET BY DEFAULT TO:  89.0 SQ M/HA.
+
+ SPECIES      PW      LW      FD      BG      HW      CW      PL      SE      BL      PY
+ SDI MAX    2066.   2066.   2066.   2066.   2066.   2066.   2066.   2066.   2066.   2066.
+
+ SPECIES      EP      AT      AC      OC      OH
+ SDI MAX    2066.   2066.   2066.   2066.   2066.
+
+                                  NATIONAL VOLUME ESTIMATOR LIBRARY EQUATION NUMBERS
+SPECIES CUBIC FOOT BOARD FOOT SPECIES CUBIC FOOT BOARD FOOT SPECIES CUBIC FOOT BOARD FOOT SPECIES CUBIC FOOT BOARD FOOT 
+------- ---------- ---------- ------- ---------- ---------- ------- ---------- ---------- ------- ---------- ---------- 
+  PW    ---        ---         LW    ---        ---         FD    ---        ---         BG    ---        ---       
+  HW    ---        ---         CW    ---        ---         PL    ---        ---         SE    ---        ---       
+  BL    ---        ---         PY    ---        ---         EP    ---        ---         AT    ---        ---       
+  AC    ---        ---         OC    ---        ---         OH    ---        ---       
+SITECODE   SITE INDEX INFORMATION:
+            PW=   0.0;  LW=   0.0;  FD=   0.0;  BG=   0.0;  HW=   0.0;  CW=   0.0;  PL=   0.0;  SE=   0.0; BL=   0.0
+            PY=   0.0;  EP=   0.0;  AT=   0.0;  AC=   0.0;  OC=   0.0;  OH=   0.0
+           SITE SPECIES=FD CODE=    3
+           NOTE: SITE INDEX IS NOT USED IN THIS VARIANT.  VALUES ARE PRINTED FOR INFORMATIONAL PURPOSES.
+
+ INVENTORY POINT CROSS REFERENCE (FVS SEQUENTIAL POINT NUMBER = POINT NUMBER AS ENTERED IN THE INPUT DATA):
+  1=     101;   2=     102;   3=     103;   4=     104;   5=     105;   6=     106;   7=     107;   8=     108;   9=     109
+ 10=     110;  11=     111
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+                                                     ACTIVITY SCHEDULE
+
+ STAND ID= S248112                       MGMT ID= NONE     UNTHINNED CONTROL.                                                     
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+ CYCLE  DATE  EXTENSION  KEYWORD   DATE  PARAMETERS:
+ -----  ----  ---------  --------  ----  ------------------------------------------------------------------------------------------
+
+   1   1990
+               BASE     TREELIST  1990       3.0000     0.0000
+               BASE     CUTLIST   1990       3.0000     0.0000
+               BASE     ATRTLIST  1990       3.0000     0.0000
+               MIST     MISTABLE  1990       0.0000
+
+   2   2000
+               BASE     TREELIST  2000       3.0000     0.0000
+               BASE     CUTLIST   2000       3.0000     0.0000
+               BASE     ATRTLIST  2000       3.0000     0.0000
+               MIST     MISTABLE  2000       0.0000
+
+   3   2010
+               BASE     TREELIST  2010       3.0000     0.0000
+               BASE     CUTLIST   2010       3.0000     0.0000
+               BASE     ATRTLIST  2010       3.0000     0.0000
+               MIST     MISTABLE  2010       0.0000
+
+   4   2020
+               BASE     TREELIST  2020       3.0000     0.0000
+               BASE     CUTLIST   2020       3.0000     0.0000
+               BASE     ATRTLIST  2020       3.0000     0.0000
+               MIST     MISTABLE  2020       0.0000
+
+   5   2030
+               BASE     TREELIST  2030       3.0000     0.0000
+               BASE     CUTLIST   2030       3.0000     0.0000
+               BASE     ATRTLIST  2030       3.0000     0.0000
+               MIST     MISTABLE  2030       0.0000
+
+   6   2040
+               BASE     TREELIST  2040       3.0000     0.0000
+               BASE     CUTLIST   2040       3.0000     0.0000
+               BASE     ATRTLIST  2040       3.0000     0.0000
+               MIST     MISTABLE  2040       0.0000
+
+   7   2050
+               BASE     TREELIST  2050       3.0000     0.0000
+               BASE     CUTLIST   2050       3.0000     0.0000
+               BASE     ATRTLIST  2050       3.0000     0.0000
+               MIST     MISTABLE  2050       0.0000
+
+   8   2060
+               BASE     TREELIST  2060       3.0000     0.0000
+               BASE     CUTLIST   2060       3.0000     0.0000
+               BASE     ATRTLIST  2060       3.0000     0.0000
+               MIST     MISTABLE  2060       0.0000
+
+   9   2070
+               BASE     TREELIST  2070       3.0000     0.0000
+               BASE     CUTLIST   2070       3.0000     0.0000
+               BASE     ATRTLIST  2070       3.0000     0.0000
+               MIST     MISTABLE  2070       0.0000
+
+  10   2080
+               BASE     TREELIST  2080       3.0000     0.0000
+               BASE     CUTLIST   2080       3.0000     0.0000
+               BASE     ATRTLIST  2080       3.0000     0.0000
+               MIST     MISTABLE  2080       0.0000
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+ CALIBRATION STATISTICS:
+
+
+                                                 OC    LW    SE
+                                                ----  ----  ----
+
+ NUMBER OF RECORDS PER SPECIES                    22     4     3
+
+ NUMBER OF RECORDS CODED AS RECENT MORTALITY       1     0     0
+
+ NUMBER OF RECORDS WITH MISSING HEIGHTS            1     0     0
+
+ NUMBER OF RECORDS WITH BROKEN OR DEAD TOPS        1     1     0
+
+ NUMBER OF RECORDS WITH MISSING CROWN RATIOS       0     0     0
+
+ NUMBER OF RECORDS AVAILABLE FOR SCALING
+ THE DIAMETER INCREMENT MODEL                      7     0     0
+
+ RATIO OF STANDARD ERRORS
+ (INPUT DBH GROWTH DATA : MODEL)                2.02  1.00  1.00
+
+ WEIGHT GIVEN TO THE INPUT GROWTH DATA WHEN
+ DBH GROWTH MODEL SCALE FACTORS WERE COMPUTED   0.71  0.00  0.00
+
+ INITIAL SCALE FACTORS FOR THE
+ DBH INCREMENT MODEL                            0.96  1.00  1.00
+
+ NUMBER OF RECORDS AVAILABLE FOR SCALING
+ THE SMALL TREE HEIGHT INCREMENT MODEL            4     0     1
+
+ INITIAL SCALE FACTORS FOR THE SMALL TREE
+ HEIGHT INCREMENT MODEL                         1.00  1.00  1.00
+
+ NUMBER OF RECORDS WITH MISTLETOE                  2     0     0
+
+
+        GENERAL SPECIES SUMMARY FOR THE CRUISE (PER HECTARE)
+
+  SPECIES        NMV (CU M)   GTV (CU M)           TREES    BASAL AREA
+-------------------------------------------------------------------------
+ LW  =  LW              0.0         19.7           202.2           1.0
+ SE  =  SE              0.0          4.2           202.2           0.3
+ OC  =  OC              0.0        164.0          1684.8           6.6
+
+
+                  DISTRIBUTION OF STAND ATTRIBUTES AMONG SAMPLE POINTS
+
+                              STANDARD  COEFF OF SAMPLE             95%           SAMPLING ERROR IN
+ CHARACTERISTIC         MEAN DEVIATION VARIATION   SIZE     CONFIDENCE  LIMITS    PERCENT     UNITS
+----------------   --------- --------- --------- ------ ----------------------    -----------------
+TREES/HA             2089.12   1232.35      0.59     11   1260.99      2917.24      98.0      335.1
+CUBIC METERS/HA       187.92    159.92      0.85     11     80.46       295.38       4.0     1535.8
+BOARD FEET/HA           0.00      0.00
+BASAL AREA/HA           7.98      6.17      0.77     11      3.83        12.12      11.9       18.1
+
+
+         FOREST VEGETATION SIMULATOR     VERSION 4004 -- BC                                     RV:20220701    11-24-2022  14:43:44
+
+STAND ID: S248112                       MGMT ID: NONE     UNTHINNED CONTROL.
+
+
+                                        STAND COMPOSITION (BASED ON STOCKABLE AREA)
+--------------------------------------------------------------------------------------------------------------------------
+                            PERCENTILE POINTS IN THE
+                     DISTRIBUTION OF STAND ATTRIBUTES BY DBH       TOTAL/HA
+        STAND       -----------------------------------------      OF STAND         DISTRIBUTION OF STAND ATTRIBUTES BY
+YEAR  ATTRIBUTES      10     30     50     70     90    100       ATTRIBUTES       SPECIES AND 3 USER-DEFINED SUBCLASSES
+----  -----------   ------ ------ ------ ------ ------ ------   --------------  ------------------------------------------
+                                 (DBH IN CM)
+
+
+
+1990  TREES           0.1    3.2    6.2    8.4   10.4    12.7    2298. TREES     45.% OC1,  35.% OC2,   6.% LW1,   6.% SE1
+      VOLUME:  
+        TOTAL         6.6    8.5    9.6   10.9   12.7    12.7     207. CU M      72.% OC1,  15.% OC2,   6.% LW1,   5.% LW2
+        MERCH        12.7   12.7   12.7   12.7   12.7    12.7       0. CU M       0.% ---,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION       5.0    5.0    5.0    5.8    5.8    12.7     120. CU M/YR   90.% SE1,   3.% OC3,   3.% OC1,   3.% OC2
+      MORTALITY       6.5    8.2    9.5   10.0   11.5    12.7       1. CU M/YR   73.% OC1,  15.% OC2,   6.% LW1,   5.% LW2
+
+
+
+2000  TREES           7.0    9.1   10.6   12.7   20.0    82.2    2201. TREES     46.% OC1,  26.% OC2,   8.% OC3,   7.% SE1
+      VOLUME:  
+        TOTAL        11.1   76.8   76.9   81.5   82.2    82.2    1402. CU M      78.% SE1,  13.% OC1,   4.% OC2,   3.% OC3
+        MERCH        76.8   76.8   81.3   81.5   82.2    82.2    1090. CU M      96.% SE1,   3.% OC3,   1.% SE2,   0.% ---
+
+
+      ACCRETION       7.7   12.1   20.1   76.9   81.5    82.2       4. CU M/YR   49.% SE1,  26.% OC1,  16.% OC2,   5.% SE2
+      MORTALITY      10.8   20.1   76.8   81.3   81.5    82.2       5. CU M/YR   65.% SE1,  14.% OC3,  13.% OC1,   5.% OC2
+
+
+
+2010  TREES           7.9    9.2   10.8   12.8   20.5    82.9    2092. TREES     45.% OC1,  26.% OC2,   9.% OC3,   7.% SE1
+      VOLUME:  
+        TOTAL        11.2   77.6   77.9   82.0   82.6    82.9    1394. CU M      77.% SE1,  13.% OC1,   5.% OC2,   2.% OC3
+        MERCH        77.6   77.8   78.4   82.0   82.7    82.9    1075. CU M      97.% SE1,   3.% OC3,   1.% SE2,   0.% ---
+
+
+      ACCRETION       8.9   12.9   77.4   77.9   82.0    82.9       4. CU M/YR   50.% SE1,  25.% OC1,  15.% OC2,   6.% SE2
+      MORTALITY      10.8   20.5   77.6   81.7   82.2    82.9       5. CU M/YR   64.% SE1,  14.% OC3,  14.% OC1,   5.% OC2
+
+
+
+2020  TREES           8.2    9.2   11.0   12.8   20.8    83.4    1989. TREES     45.% OC1,  27.% OC2,   8.% OC3,   7.% SE1
+      VOLUME:  
+        TOTAL        11.5   78.5   78.8   82.5   83.1    83.4    1385. CU M      77.% SE1,  13.% OC1,   5.% OC2,   2.% OC3
+        MERCH        78.5   78.7   79.7   82.5   83.3    83.4    1062. CU M      97.% SE1,   2.% OC3,   1.% SE2,   0.% ---
+
+
+      ACCRETION       9.5   13.7   78.0   78.8   82.5    83.4       4. CU M/YR   51.% SE1,  25.% OC1,  12.% OC2,   7.% SE2
+      MORTALITY      10.8   20.8   78.6   82.1   82.8    83.4       5. CU M/YR   63.% SE1,  15.% OC3,  14.% OC1,   5.% OC2
+
+
+
+2030  TREES           8.6    9.1   11.1   13.1   21.4    83.8    1882. TREES     45.% OC1,  25.% OC2,   9.% OC3,   7.% SE1
+      VOLUME:  
+        TOTAL        11.5   79.2   79.9   83.0   83.4    83.8    1375. CU M      77.% SE1,  14.% OC1,   5.% OC2,   2.% OC3
+        MERCH        79.2   79.8   80.9   83.0   83.7    83.8    1050. CU M      97.% SE1,   2.% OC3,   1.% SE2,   0.% ---
+
+
+      ACCRETION       9.9   14.2   22.2   80.2   83.0    83.8       4. CU M/YR   50.% SE1,  25.% OC1,  13.% OC2,   8.% SE2
+      MORTALITY      10.8   21.1   79.8   82.5   83.4    83.8       4. CU M/YR   59.% SE1,  17.% OC3,  15.% OC1,   6.% OC2
+
+
+
+2040  TREES           8.8    9.5   11.3   13.3   22.2    84.3    1781. TREES     43.% OC1,  25.% OC2,  11.% OC3,   7.% SE1
+      VOLUME:  
+        TOTAL        11.6   79.7   80.7   83.6   83.9    84.3    1367. CU M      77.% SE1,  13.% OC1,   5.% OC2,   2.% OC3
+        MERCH        79.7   80.5   82.1   83.6   84.2    84.3    1040. CU M      97.% SE1,   1.% SE2,   1.% OC3,   0.% ---
+
+
+      ACCRETION       9.7   14.8   22.9   80.7   83.6    84.3       3. CU M/YR   48.% SE1,  28.% OC1,  12.% OC2,   9.% SE2
+      MORTALITY      10.6   15.4   80.5   82.1   83.9    84.3       4. CU M/YR   58.% SE1,  17.% OC3,  15.% OC1,   6.% OC2
+
+
+
+2050  TREES           8.8    9.7   11.5   13.6   23.6    84.9    1684. TREES     43.% OC1,  25.% OC2,  11.% OC3,   8.% SE1
+      VOLUME:  
+        TOTAL        11.9   80.3   81.5   84.0   84.4    84.9    1360. CU M      76.% SE1,  13.% OC1,   5.% OC2,   2.% OC3
+        MERCH        80.3   81.3   82.9   84.0   84.7    84.9    1032. CU M      97.% SE1,   2.% SE2,   1.% OC3,   0.% ---
+
+
+      ACCRETION      10.2   15.4   80.2   81.5   84.0    84.9       3. CU M/YR   50.% SE1,  25.% OC1,  11.% OC2,   9.% SE2
+      MORTALITY      10.4   15.6   81.3   82.9   84.4    84.9       4. CU M/YR   58.% SE1,  17.% OC3,  15.% OC1,   6.% OC2
+
+
+
+2060  TREES           8.8   10.0   11.6   13.9   24.5    85.4    1589. TREES     41.% OC1,  25.% OC2,  13.% OC3,   8.% SE1
+      VOLUME:  
+        TOTAL        12.2   80.9   82.7   84.6   85.0    85.4    1352. CU M      76.% SE1,  13.% OC1,   5.% OC2,   3.% OC3
+        MERCH        80.9   82.2   83.6   84.6   85.2    85.4    1025. CU M      97.% SE1,   2.% SE2,   1.% OC3,   0.% ---
+
+
+      ACCRETION      10.7   15.8   25.2   82.7   84.6    85.4       3. CU M/YR   48.% SE1,  26.% OC1,  12.% OC2,   9.% SE2
+      MORTALITY      10.3   15.5   82.2   83.6   85.0    85.4       4. CU M/YR   57.% SE1,  19.% OC3,  15.% OC1,   6.% OC2
+
+
+
+2070  TREES           8.9   10.3   11.8   14.3   25.3    86.0    1495. TREES     38.% OC1,  24.% OC2,  16.% OC3,   8.% SE1
+      VOLUME:  
+        TOTAL        12.5   81.5   83.4   85.1   85.6    86.0    1345. CU M      76.% SE1,  12.% OC1,   5.% OC2,   3.% OC3
+        MERCH        81.5   83.0   84.2   85.1   85.7    86.0    1021. CU M      97.% SE1,   2.% SE2,   1.% OC3,   0.% OC1
+
+
+      ACCRETION      11.1   16.4   26.6   83.4   85.3    86.0       3. CU M/YR   49.% SE1,  24.% OC1,  12.% OC2,  10.% SE2
+      MORTALITY      10.5   14.4   81.5   84.2   85.6    86.0       4. CU M/YR   55.% SE1,  21.% OC3,  15.% OC1,   7.% OC2
+
+
+
+2080  TREES           8.9   10.7   12.0   14.6   27.0    86.6    1401. TREES     36.% OC1,  24.% OC2,  17.% OC3,   8.% SE1
+      VOLUME:  
+        TOTAL        12.7   82.2   84.2   85.5   86.3    86.6    1336. CU M      76.% SE1,  12.% OC1,   5.% OC2,   3.% OC3
+        MERCH        82.2   83.8   85.1   85.5   86.3    86.6    1033. CU M      95.% SE1,   2.% SE2,   1.% OC1,   1.% OC3
+
+
+      ACCRETION      11.3   16.8   27.3   84.2   85.5    86.6       3. CU M/YR   46.% SE1,  24.% OC1,  13.% SE2,  11.% OC2
+      MORTALITY      11.0   14.6   82.2   85.1   85.8    86.6       4. CU M/YR   53.% SE1,  23.% OC3,  13.% OC1,   6.% OC2
+
+
+
+2090  TREES           9.0   11.2   12.3   14.9   28.3    87.0    1306. TREES     33.% OC1,  23.% OC2,  20.% OC3,   9.% SE1
+      VOLUME:  
+        TOTAL        13.0   83.2   84.7   86.0   86.8    87.0    1327. CU M      76.% SE1,  11.% OC1,   5.% OC2,   4.% OC3
+        MERCH        82.7   84.4   85.8   86.0   86.9    87.0    1044. CU M      94.% SE1,   3.% SE2,   3.% OC1,   1.% OC3
+
+
+         FOREST VEGETATION SIMULATOR     VERSION 4004 -- BC                                     RV:20220701    11-24-2022  14:43:44
+
+STAND ID: S248112                       MGMT ID: NONE     UNTHINNED CONTROL.
+
+
+------------------------------------------------------------------------------------------------------------------------------
+                     ATTRIBUTES OF SELECTED SAMPLE TREES                 ADDITIONAL STAND ATTRIBUTES (BASED ON STOCKABLE AREA)
+      -----------------------------------------------------------------  -----------------------------------------------------
+      INITIAL                             LIVE  PAST DBH   BASAL  TREES         QUADRATIC    TREES     BASAL     TOPHT   CROWN
+      TREE/HA              DBH   HEIGHT  CROWN    GROWTH    AREA    PER  STAND   MEAN DBH      PER      AREA   LARGEST    COMP
+YEAR    %TILE SPECIES     (CM)      (M)  RATIO      (CM)   %TILE     HA    AGE       (CM)       HA   (M2/HA)     40/HA  FACTOR
+----  ------- ------- -------- -------- ------ --------- ------- ------  -----  ---------   ------ --------- --------- -------
+
+1990                                          ( 10 YRS)
+
+        10     OC2       0.10     3.00    65     0.07      0.0  222.39
+        30     OC2       3.20    17.00    45     0.60      1.0   74.13
+        50     OC1       6.20    38.00    45     2.00     12.9   74.13
+        70     LW1       8.40     5.00    35     0.94     36.1   74.13
+        90     OC2      10.40    55.00    45     0.90     72.6   74.13
+       100     OC1      12.70    67.00    35     1.60    100.0   74.13
+                                                                          60       7.0     2298.       9.       68.6     64.5
+
+2000                                          ( 10 YRS)
+
+        10     OC3      20.02    17.07    65    17.27     21.3  185.74
+        30     OC2       7.18    19.38    45     3.45      1.3   71.61
+        50     OC1       6.52    38.00    45     0.27      0.6   71.61
+        70     LW1       9.47     8.01    32     0.91      4.1   72.16
+        90     OC2      11.67    55.97    45     1.10      8.5   72.97
+       100     OC1      14.09    67.70    35     1.20     15.3   72.97
+                                                                          70      23.3     2201.      94.       42.4    324.2
+
+2010                                          ( 10 YRS)
+
+        10     OC3      20.39    17.07    65     0.31     20.7  155.13
+        30     OC2       8.55    20.12    45     1.19      2.4   69.49
+        50     OC3       6.83    38.00    45     0.27      0.7   59.81
+        70     LW1       9.47     9.83    29     0.00      4.0   68.94
+        90     OC2      11.90    56.67    45     0.20      8.7   70.21
+       100     OC1      14.34    68.18    35     0.22     15.6   70.21
+                                                                          80      23.8     2092.      93.       42.5    318.5
+
+2020                                          ( 10 YRS)
+
+        10     OC3      20.76    17.07    66     0.32     21.5  129.56
+        30     OC2       8.75    21.21    44     0.17      3.0   67.50
+        50     OC3       7.18    38.02    45     0.30      0.2   49.95
+        70     LW1       9.47    11.56    26     0.00      4.1   65.86
+        90     OC2      12.24    57.38    45     0.29      8.9   67.56
+       100     OC1      14.68    68.67    35     0.30     16.2   67.56
+                                                                          90      24.2     1989.      92.       42.7    312.4
+
+2030                                          ( 10 YRS)
+
+        10     OC3      21.23    17.07    66     0.41     20.8   96.68
+        30     OC2       8.95    22.36    43     0.18      3.1   65.58
+        50     OC3       7.50    38.02    45     0.27      0.1   37.27
+        70     LW1       9.47    13.24    23     0.00      4.0   62.91
+        90     OC2      12.57    58.07    45     0.29      9.2   65.00
+       100     OC1      14.97    69.15    35     0.25     16.3   65.00
+                                                                         100      24.7     1882.      90.       42.8    305.9
+
+2040                                          ( 10 YRS)
+
+        10     OC3      21.54    17.07    66     0.27     18.9   72.14
+        30     OC2       9.17    23.55    42     0.19      3.0   63.99
+        50     OC3       7.81    38.02    45     0.27      0.1   27.81
+        70     LW1       9.47    14.84    21     0.00      3.8   60.10
+        90     OC2      12.96    58.76    45     0.33      9.4   62.54
+       100     OC1      15.24    69.61    35     0.24     15.6   62.54
+                                                                         110      25.3     1781.      89.       42.9    299.4
+
+2050                                          ( 10 YRS)
+
+        10     OC3      21.88    17.07    66     0.30     18.3   53.83
+        30     OC2       9.34    24.73    41     0.14      2.3   62.51
+        50     OC3       7.91    38.03    45     0.09      0.1   20.75
+        70     LW1       9.47    16.36    19     0.00      2.9   57.42
+        90     OC2      13.27    59.41    45     0.27      9.5   60.17
+       100     OC1      15.53    69.61    35     0.24     15.1   60.17
+                                                                         120      25.8     1684.      88.       43.0    293.6
+
+2060                                          ( 10 YRS)
+
+        10     OC3      22.35    17.07    66     0.40     18.1   40.17
+        30     OC2       9.54    25.95    41     0.17      2.4   61.03
+        50     OC3       8.03    38.07    45     0.10      0.1   15.49
+        70     LW1       9.47    17.87    17     0.00      2.1   54.85
+        90     OC2      13.64    60.06    45     0.32     11.3   57.90
+       100     OC1      15.83    69.61    35     0.27     14.5   57.90
+                                                                         130      26.4     1589.      87.       43.1    288.3
+
+2070                                          ( 10 YRS)
+
+        10     OC3      22.71    17.07    66     0.32     17.9   29.98
+        30     OC2       9.74    27.18    41     0.18      2.2   59.66
+        50     OC3       8.12    38.07    45     0.08      0.1   11.56
+        70     LW1       9.47    19.34    15     0.00      1.7   52.40
+        90     OC2      13.92    60.06    45     0.24     10.2   55.71
+       100     OC1      16.06    69.61    35     0.19     14.1   55.71
+                                                                         140      27.1     1495.      86.       43.2    283.6
+
+2080                                          ( 10 YRS)
+
+        10     OC3      23.11    17.07    66     0.35     17.5   22.37
+        30     OC2       9.94    28.44    41     0.17      2.2   58.36
+        50     OC3       8.19    38.09    45     0.06      0.1    8.62
+        70     LW1       9.47    20.78    14     0.00      1.4   50.06
+        90     OC2      14.18    60.06    45     0.23     10.0   53.14
+       100     OC1      16.29    69.61    35     0.20     13.5   53.60
+                                                                         150      27.9     1401.      86.       43.2    278.9
+
+2090                                          ( 10 YRS)
+
+        10     OC3      23.53    17.07    66     0.36     17.2   17.64
+        30     OC2      10.22    29.75    41     0.24      2.3   57.09
+        50     OC3       8.27    38.09    45     0.07      0.0    6.44
+        70     LW1       9.47    22.15    13     0.00      1.3   47.83
+        90     OC2      14.41    60.06    45     0.20      9.7   50.70
+       100     OC1      16.64    69.61    35     0.31     13.1   51.57
+                                                                         160      28.8     1306.      85.       43.3    273.7
+
+
+         FOREST VEGETATION SIMULATOR     VERSION 4004 -- BC                                     RV:20220701    11-24-2022  14:43:44
+
+STAND ID: S248112                       MGMT ID: NONE     UNTHINNED CONTROL.
+
+
+
+                                SUMMARY STATISTICS (PER HA OR STAND BASED ON TOTAL   STAND AREA)
+--------------------------------------------------------------------------------------------------------------------------------------
+               START OF SIMULATION PERIOD                     REMOVALS            AFTER TREATMENT     GROWTH THIS PERIOD
+         --------------------------------------------- ----------------------- ---------------------  ------------------    MAI ------
+         NO OF              TOP      TOTAL MERCH   N/A NO OF TOTAL MERCH   N/A              TOP  RES  PERIOD ACCRE MORT   TOTAL FOR SS
+YEAR AGE TREES  BA  SDI CCF  HT  QMD  CU M  CU M       TREES  CU M  CU M        BA  SDI CCF  HT  QMD   YEARS  PER  YEAR    CU M TYP ZT
+---- --- ----- --- ---- --- --- ---- ----- ----- ----- ----- ----- ----- ----- --- ---- --- --- ----  ------ ---- -----   ----- ------
+1990  60  2087   8  261  59  68  7.0   187     0     0     0     0     0     0   8  261  59  68  7.0      10  109     0     0.0 201 33
+2000  70  2001  85 1746 295  42 23.3  1274   990     0     0     0     0     0  85 1746 295  42 23.3      10    3     4    14.2 265 11
+2010  80  1902  84 1709 290  42 23.8  1266   977     0     0     0     0     0  84 1709 290  42 23.8      10    3     4    12.2 265 11
+2020  90  1808  83 1675 284  42 24.2  1258   965     0     0     0     0     0  83 1675 284  42 24.2      10    3     4    10.7 265 11
+2030 100  1709  82 1638 278  42 24.7  1250   954     0     0     0     0     0  82 1638 278  42 24.7      10    3     3     9.5 265 11
+2040 110  1618  81 1603 272  42 25.3  1243   945     0     0     0     0     0  81 1603 272  42 25.3      10    3     3     8.6 265 11
+2050 120  1529  80 1571 267  42 25.8  1236   938     0     0     0     0     0  80 1571 267  42 25.8      10    3     3     7.8 265 11
+2060 130  1445  79 1539 262  42 26.4  1229   932     0     0     0     0     0  79 1539 262  42 26.4      10    3     3     7.2 265 11
+2070 140  1359  78 1509 258  43 27.1  1222   928     0     0     0     0     0  78 1509 258  43 27.1      10    2     3     6.6 265 11
+2080 150  1275  77 1480 254  43 27.9  1214   938     0     0     0     0     0  77 1480 254  43 27.9      10    2     3     6.3 265 11
+2090 160  1188  77 1448 249  43 28.8  1206   948     0     0     0     0     0  77 1448 249  43 28.8       0    0     0     5.9 265 11
+
+NOTE: 11 LINES OF SUMMARY DATA HAVE BEEN WRITTEN TO THE FILE REFERENCED BY LOGICAL UNIT  4
+
+
+
+
+                                                     ACTIVITY SUMMARY 
+
+ STAND ID= S248112                       MGMT ID= NONE     UNTHINNED CONTROL.                                                     
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+ CYCLE  DATE  EXTENSION  KEYWORD   DATE  ACTIVITY DISPOSITION  PARAMETERS:
+ -----  ----  ---------  --------  ----  --------------------  --------------------------------------------------------------------
+
+   1   1990
+               BASE     CUTLIST   1990  NOT DONE                   3.0000     0.0000
+               BASE     ATRTLIST  1990  NOT DONE                   3.0000     0.0000
+               MIST     MISTABLE  1990  DONE IN 1990               0.0000
+               BASE     TREELIST  1990  DONE IN 1999               3.0000     0.0000
+
+   2   2000
+               BASE     CUTLIST   2000  NOT DONE                   3.0000     0.0000
+               BASE     ATRTLIST  2000  NOT DONE                   3.0000     0.0000
+               MIST     MISTABLE  2000  DONE IN 2000               0.0000
+               BASE     TREELIST  2000  DONE IN 2009               3.0000     0.0000
+
+   3   2010
+               BASE     CUTLIST   2010  NOT DONE                   3.0000     0.0000
+               MIST     MISTABLE  2010  DONE IN 2010               0.0000
+               BASE     ATRTLIST  2010  NOT DONE                   3.0000     0.0000
+               BASE     TREELIST  2010  DONE IN 2019               3.0000     0.0000
+
+   4   2020
+               MIST     MISTABLE  2020  DONE IN 2020               0.0000
+               BASE     CUTLIST   2020  NOT DONE                   3.0000     0.0000
+               BASE     ATRTLIST  2020  NOT DONE                   3.0000     0.0000
+               BASE     TREELIST  2020  DONE IN 2029               3.0000     0.0000
+
+   5   2030
+               MIST     MISTABLE  2030  DONE IN 2030               0.0000
+               BASE     CUTLIST   2030  NOT DONE                   3.0000     0.0000
+               BASE     ATRTLIST  2030  NOT DONE                   3.0000     0.0000
+               BASE     TREELIST  2030  DONE IN 2039               3.0000     0.0000
+
+   6   2040
+               MIST     MISTABLE  2040  DONE IN 2040               0.0000
+               BASE     CUTLIST   2040  NOT DONE                   3.0000     0.0000
+               BASE     ATRTLIST  2040  NOT DONE                   3.0000     0.0000
+               BASE     TREELIST  2040  DONE IN 2049               3.0000     0.0000
+
+   7   2050
+               MIST     MISTABLE  2050  DONE IN 2050               0.0000
+               BASE     CUTLIST   2050  NOT DONE                   3.0000     0.0000
+               BASE     ATRTLIST  2050  NOT DONE                   3.0000     0.0000
+               BASE     TREELIST  2050  DONE IN 2059               3.0000     0.0000
+
+   8   2060
+               MIST     MISTABLE  2060  DONE IN 2060               0.0000
+               BASE     CUTLIST   2060  NOT DONE                   3.0000     0.0000
+               BASE     ATRTLIST  2060  NOT DONE                   3.0000     0.0000
+               BASE     TREELIST  2060  DONE IN 2069               3.0000     0.0000
+
+   9   2070
+               MIST     MISTABLE  2070  DONE IN 2070               0.0000
+               BASE     CUTLIST   2070  NOT DONE                   3.0000     0.0000
+               BASE     ATRTLIST  2070  NOT DONE                   3.0000     0.0000
+               BASE     TREELIST  2070  DONE IN 2079               3.0000     0.0000
+
+  10   2080
+               MIST     MISTABLE  2080  DONE IN 2080               0.0000
+               BASE     CUTLIST   2080  NOT DONE                   3.0000     0.0000
+               BASE     ATRTLIST  2080  NOT DONE                   3.0000     0.0000
+               BASE     TREELIST  2080  DONE IN 2089               3.0000     0.0000
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------------------------------------------
+                              DWARF MISTLETOE INFECTION AND MORTALITY STATISTICS SUMMARY TABLE
+                                         (BY SPECIES; TOP 4 MOST INFECTED SPECIES)
+----------------------------------------------------------------------------------------------------------------------------
+
+Stand ID: S248112                      Management Code: NONE   Revision code: 991201
+
+DMRs and DMIs calculated for trees with DBH >= 1.0
+MEAN DMR = Average dwarf mistletoe rating for all trees of that species.
+MEAN DMI = Average dwarf mistletoe rating for infected-only trees of that species.
+
+                                         TPH INFECTED       TPH MORTALITY         % TPH           % TPH        COMPOSITION
+YEAR    MEAN DMR        MEAN DMI           WITH DM             FROM DM           INFECTED       MORTALITY    OF STAND (%TPH)
+---- --------------- --------------- ------------------- ------------------- --------------- --------------- ---------------
+      OC  **  **  **  OC  **  **  **  OC   **   **   **   OC   **   **   **   OC  **  **  **  OC  **  **  **  OC  **  **  **
+     --- --- --- --- --- --- --- --- ---- ---- ---- ---- ---- ---- ---- ---- --- --- --- --- --- --- --- --- --- --- --- ---
+1990 0.1 0.0 0.0 0.0 2.0 0.0 0.0 0.0   74    0    0    0   38    0    0    0   4   0   0   0   2   0   0   0  81   0   0   0
+2000 0.7 0.0 0.0 0.0 3.4 0.0 0.0 0.0  347    0    0    0   33    0    0    0  20   0   0   0   2   0   0   0  80   0   0   0
+2010 0.8 0.0 0.0 0.0 3.0 0.0 0.0 0.0  416    0    0    0   35    0    0    0  25   0   0   0   2   0   0   0  80   0   0   0
+2020 0.9 0.0 0.0 0.0 2.7 0.0 0.0 0.0  566    0    0    0   36    0    0    0  36   0   0   0   2   0   0   0  80   0   0   0
+2030 1.1 0.0 0.0 0.0 2.9 0.0 0.0 0.0  586    0    0    0   43    0    0    0  39   0   0   0   3   0   0   0  79   0   0   0
+2040 1.3 0.0 0.0 0.0 2.8 0.0 0.0 0.0  633    0    0    0   44    0    0    0  45   0   0   0   3   0   0   0  79   0   0   0
+2050 1.4 0.0 0.0 0.0 2.8 0.0 0.0 0.0  653    0    0    0   44    0    0    0  49   0   0   0   3   0   0   0  78   0   0   0
+2060 1.5 0.0 0.0 0.0 2.8 0.0 0.0 0.0  671    0    0    0   44    0    0    0  54   0   0   0   4   0   0   0  78   0   0   0
+2070 1.7 0.0 0.0 0.0 2.9 0.0 0.0 0.0  681    0    0    0   47    0    0    0  59   0   0   0   4   0   0   0  77   0   0   0
+2080 1.9 0.0 0.0 0.0 3.1 0.0 0.0 0.0  655    0    0    0   49    0    0    0  61   0   0   0   5   0   0   0  77   0   0   0
+2090 2.0 0.0 0.0 0.0 3.2 0.0 0.0 0.0  608    0    0    0   52    0    0    0  61   0   0   0   5   0   0   0  76   0   0   0
+
+
+----------------------------------------------------------------------------------------------------------------------------
+                        DWARF MISTLETOE INFECTION AND MORTALITY STATISTICS SUMMARY TABLE
+                                          (STAND COMPOSITE; PER HA)
+----------------------------------------------------------------------------------------------------------------
+
+Stand ID: S248112                      Management Code: NONE   Revision code: 991201
+
+DMRs and DMIs calculated for trees with DBH >= 1.0
+MEAN DMR = Average dwarf mistletoe rating for  all trees in the stand.              * --WARNING-- Calculation may
+MEAN DMI = Average dwarf mistletoe rating for infected-only trees in the stand.         include nonhost species.
+
+               START OF CYCLE        DM INFECTION         DM MORTALITY
+             ------------------   ------------------   ------------------                               *
+             TREES   BA    VOL    TREES   BA    VOL    TREES   BA    VOL    %TPH  %VOL   %TPH  %VOL   MEAN  MEAN
+YEAR   AGE    /HA   SQ M  CU  M    /HA   SQ M  CU  M    /HA   SQ M  CU  M    INF   INF   MORT  MORT    DMR   DMI
+----   ---   -----  ----  -----   -----  ----  -----   -----  ----  -----   ----  ----   ----  ----   ----  ----
+1990    60    2298     9    207      74     0      4      38     0      0      3     2      2     0    0.1   2.0
+2000    70    2201    94   1402     347     4     61      33     0      6     16     4      2     0    0.5   3.4
+2010    80    2092    93   1394     416     5     73      35     0      6     20     5      2     0    0.6   3.0
+2020    90    1989    92   1385     566     6     84      36     0      6     28     6      2     0    0.8   2.7
+2030   100    1882    90   1375     586     6     97      43     0      7     31     7      2     1    0.9   2.9
+2040   110    1781    89   1367     633     7    112      44     0      7     36     8      2     1    1.0   2.8
+2050   120    1684    88   1360     653     8    121      44     0      7     39     9      3     1    1.1   2.8
+2060   130    1589    87   1352     671     9    135      44     0      7     42    10      3     1    1.2   2.8
+2070   140    1495    86   1345     681    10    152      47     1      8     46    11      3     1    1.3   2.9
+2080   150    1401    86   1336     655    10    158      49     1     10     47    12      4     1    1.4   3.1
+2090   160    1306    85   1327     608    10    158      52     1     10     47    12      4     1    1.5   3.2
+
+
+----------------------------------------------------------------------------------------------------------------------------
+                            DWARF MISTLETOE INFECTION AND MORTALITY STATISTICS SUMMARY TABLE
+                                              (BY 5 CM DIAMETER CLASSES)
+------------------------------------------------------------------------------------------------------------------------
+
+Stand ID: S248112                      Management Code: NONE   Revision code: 991201
+
+DMRs and DMIs calculated for trees with DBH >= 1.0
+MEAN DMR = Average dwarf mistletoe rating for all trees of that diameter class.
+MEAN DMI = Average dwarf mistletoe rating for infected-only trees of that diameter class.
+
+YEAR                                                   5 CM DIAMETER CLASSES
+----         -----------------------------------------------------------------------------------------------------------
+                0-5cm     5-10cm    10-15cm    15-20cm    20-25cm    25-30cm    30-35cm    35-40cm    40-45cm     45+ cm
+             --------   --------   --------   --------   --------   --------   --------   --------   --------   --------
+1990
+       TPH      815.4      444.8      370.6      370.6      296.5        0.0        0.0        0.0        0.0        0.0
+       INF        0.0       74.1        0.0        0.0        0.0        0.0        0.0        0.0        0.0        0.0
+       MRT       36.7        1.2        0.0        0.0        0.0        0.0        0.0        0.0        0.0        0.0
+       DMR        0.0        0.3        0.0        0.0        0.0        0.0        0.0        0.0        0.0        0.0
+       DMI        0.0        2.0        0.0        0.0        0.0        0.0        0.0        0.0        0.0        0.0
+2000
+       TPH      100.3      422.1      552.4      493.4      414.2       72.9        0.0        0.0        0.0      145.2
+       INF        0.0       82.0       17.9      185.7       61.2        0.0        0.0        0.0        0.0        0.0
+       MRT        0.0        2.1        0.1       30.6        0.4        0.0        0.0        0.0        0.0        0.0
+       DMR        0.0        0.4        0.0        1.9        0.1        0.0        0.0        0.0        0.0        0.0
+       DMI        0.0        2.2        1.0        5.0        1.0        0.0        0.0        0.0        0.0        0.0
+2010
+       TPH        0.0      486.8      132.0      820.3      335.3      152.7       24.0        0.0        0.0      140.9
+       INF        0.0       87.7       19.8      221.3       87.6        0.0        0.0        0.0        0.0        0.0
+       MRT        0.0        5.8        0.2       27.8        0.7        0.0        0.0        0.0        0.0        0.0
+       DMR        0.0        0.5        0.2        1.1        0.3        0.0        0.0        0.0        0.0        0.0
+       DMI        0.0        2.9        1.2        3.9        1.2        0.0        0.0        0.0        0.0        0.0
+2020
+       TPH        0.0      250.2      318.0      798.4      338.7      126.4       20.5        0.0        0.0      136.9
+       INF        0.0       28.9      110.9      312.7      107.3        6.1        0.0        0.0        0.0        0.0
+       MRT        0.0        0.3        6.2       22.7        6.4        0.0        0.0        0.0        0.0        0.0
+       DMR        0.0        0.1        0.9        1.1        0.8        0.0        0.0        0.0        0.0        0.0
+       DMI        0.0        1.3        2.6        2.8        2.6        1.0        0.0        0.0        0.0        0.0
+2030
+       TPH        0.0      169.3      283.2      616.0      509.9      170.4        0.0        0.0        0.0      133.0
+       INF        0.0       25.4      140.5      117.1      270.4       33.0        0.0        0.0        0.0        0.0
+       MRT        0.0        0.5        8.9        2.9       30.6        0.3        0.0        0.0        0.0        0.0
+       DMR        0.0        0.3        1.3        0.3        2.0        0.2        0.0        0.0        0.0        0.0
+       DMI        0.0        1.8        2.6        1.8        3.8        1.2        0.0        0.0        0.0        0.0
+2040
+       TPH        0.0      151.4      370.7      328.8      669.4      124.5        6.5        0.0        0.0      129.8
+       INF        0.0       12.8      125.5       90.5      367.5       36.9        0.0        0.0        0.0        0.0
+       MRT        0.0        0.5        6.5        3.4       31.0        2.3        0.0        0.0        0.0        0.0
+       DMR        0.0        0.2        0.8        0.6        1.7        0.8        0.0        0.0        0.0        0.0
+       DMI        0.0        2.8        2.4        2.1        3.1        2.7        0.0        0.0        0.0        0.0
+2050
+       TPH        0.0       98.2      408.3      262.0      675.8       61.0       35.7       15.8        0.0      126.8
+       INF        0.0       15.5      159.0      101.6      338.0       38.7        0.0        0.0        0.0        0.0
+       MRT        0.0        0.6        6.0        5.1       25.0        6.9        0.0        0.0        0.0        0.0
+       DMR        0.0        0.4        0.8        0.9        1.5        3.1        0.0        0.0        0.0        0.0
+       DMI        0.0        2.7        2.1        2.4        3.0        4.9        0.0        0.0        0.0        0.0
+2060
+       TPH        0.0      162.2      303.3      342.9      527.3       85.5       12.5       31.6        0.0      123.8
+       INF        0.0       89.0      124.0      126.1      270.5       58.1        3.2        0.0        0.0        0.0
+       MRT        0.0        3.3        3.3        9.1       16.8       10.6        0.7        0.0        0.0        0.0
+       DMR        0.0        1.2        0.8        1.1        1.4        3.5        1.5        0.0        0.0        0.0
+       DMI        0.0        2.1        2.1        3.0        2.6        5.1        6.0        0.0        0.0        0.0
+2070
+       TPH        0.0      219.0      199.3      393.3      405.0      136.2       11.8        9.1        0.0      121.0
+       INF        0.0      122.4       75.9      177.3      218.3       77.5        9.5        0.0        0.0        0.0
+       MRT        0.0        8.1        3.8       11.2       11.9       10.3        2.0        0.0        0.0        0.0
+       DMR        0.0        1.6        1.0        1.3        1.3        2.4        4.8        0.0        0.0        0.0
+       DMI        0.0        2.9        2.7        2.8        2.4        4.3        6.0        0.0        0.0        0.0
+2080
+       TPH        0.0      177.6      217.3      353.7      271.2      223.9       37.0        2.2        0.0      118.4
+       INF        0.0      102.0       93.0      181.1      110.2      150.2       19.1        0.0        0.0        0.0
+       MRT        0.0        9.4        6.6       14.0        5.5        9.8        4.0        0.0        0.0        0.0
+       DMR        0.0        1.9        1.4        1.6        1.0        1.9        3.1        0.0        0.0        0.0
+       DMI        0.0        3.3        3.3        3.1        2.6        2.8        6.0        0.0        0.0        0.0
+2090
+       TPH        0.0      171.7      273.8      282.0      202.0      190.5       44.3       20.5        5.8      115.8
+       INF        0.0      101.1      137.8      132.7       87.8      127.7       16.1        5.3        0.0        0.0
+       MRT        0.0        8.4       13.9       13.4        4.5        7.8        2.9        1.1        0.0        0.0
+       DMR        0.0        2.0        1.8        1.7        1.2        1.6        2.0        1.5        0.0        0.0
+       DMI        0.0        3.3        3.6        3.5        2.8        2.4        5.4        6.0        0.0        0.0
+
+
+----------------------------------------------------------------------------------------------------------------------------
+                         DWARF MISTLETOE INFECTION AND MORTALITY STATISTICS DETAIL TABLE
+                                (BY SPECIES, BY 5 CM DIAMETER CLASS, BY CYCLE)
+------------------------------------------------------------------------------------------------------------------
+
+Stand ID: S248112                      Management Code: NONE   Revision code: 991201
+
+DMRs and DMIs calculated for trees with DBH >= 1.0
+MEAN DMR = Average DM rating for all trees of that species/DBH class.
+MEAN DMI = Average DM rating for infected-only trees of that species/DBH class.
+
+Year:    1990
+Species:   OC
+
+             TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA    MEAN   MEAN
+DBH CLASS      TOTAL      INFECTED    UNINFECTED     DMR 1-2      DMR 3-4      DMR 5-6     MORTALITY    DMR    DMI
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+  0- 5cm         667.2          0.0        667.2          0.0          0.0          0.0         36.7    0.0    0.0
+  5-10cm         444.8         74.1        370.6         74.1          0.0          0.0          1.2    0.3    2.0
+ 10-15cm         222.4          0.0        222.4          0.0          0.0          0.0          0.0    0.0    0.0
+ 15-20cm         222.4          0.0        222.4          0.0          0.0          0.0          0.0    0.0    0.0
+ 20-25cm         296.5          0.0        296.5          0.0          0.0          0.0          0.0    0.0    0.0
+ 25-30cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 30-35cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 35-40cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 40-45cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 45-50cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 50-55cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 55-60cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 60-65cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 65-70cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 70-75cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 75-80cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 80-85cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 85-90cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 90-95cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 95+  cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+ SUM/AVG        1853.2         74.1       1779.1         74.1          0.0          0.0         37.9    0.1    2.0
+
+Year:    2000
+Species:   OC
+
+             TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA    MEAN   MEAN
+DBH CLASS      TOTAL      INFECTED    UNINFECTED     DMR 1-2      DMR 3-4      DMR 5-6     MORTALITY    DMR    DMI
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+  0- 5cm         100.3          0.0        100.3          0.0          0.0          0.0          0.0    0.0    0.0
+  5-10cm         422.1         82.0        340.1         53.7         28.3          0.0          2.1    0.4    2.2
+ 10-15cm         552.4         17.9        534.5         17.9          0.0          0.0          0.1    0.0    1.0
+ 15-20cm         367.1        185.7        181.4          0.0          0.0        185.7         30.6    2.5    5.0
+ 20-25cm         262.3         61.2        201.0         61.2          0.0          0.0          0.4    0.2    1.0
+ 25-30cm          62.0          0.0         62.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 30-35cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 35-40cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 40-45cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 45-50cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 50-55cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 55-60cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 60-65cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 65-70cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 70-75cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 75-80cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 80-85cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 85-90cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 90-95cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 95+  cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+ SUM/AVG        1766.2        346.8       1419.4        132.8         28.3        185.7         33.2    0.7    3.4
+
+Year:    2010
+Species:   OC
+
+             TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA    MEAN   MEAN
+DBH CLASS      TOTAL      INFECTED    UNINFECTED     DMR 1-2      DMR 3-4      DMR 5-6     MORTALITY    DMR    DMI
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+  0- 5cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+  5-10cm         486.8         87.7        399.1         39.9         20.9         26.8          5.8    0.5    2.9
+ 10-15cm         132.0         19.8        112.2         19.8          0.0          0.0          0.2    0.2    1.2
+ 15-20cm         699.6        221.3        478.3         58.4         10.2        152.6         27.8    1.2    3.9
+ 20-25cm         249.2         87.6        161.6         87.6          0.0          0.0          0.7    0.4    1.2
+ 25-30cm         106.1          0.0        106.1          0.0          0.0          0.0          0.0    0.0    0.0
+ 30-35cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 35-40cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 40-45cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 45-50cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 50-55cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 55-60cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 60-65cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 65-70cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 70-75cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 75-80cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 80-85cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 85-90cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 90-95cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 95+  cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+ SUM/AVG        1673.8        416.4       1257.4        205.8         31.2        179.5         34.5    0.8    3.0
+
+Year:    2020
+Species:   OC
+
+             TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA    MEAN   MEAN
+DBH CLASS      TOTAL      INFECTED    UNINFECTED     DMR 1-2      DMR 3-4      DMR 5-6     MORTALITY    DMR    DMI
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+  0- 5cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+  5-10cm         250.2         28.9        221.3         28.9          0.0          0.0          0.3    0.1    1.3
+ 10-15cm         318.0        110.9        207.1         48.8         39.6         22.4          6.2    0.9    2.6
+ 15-20cm         635.2        312.7        322.5        164.0         49.2         99.5         22.7    1.4    2.8
+ 20-25cm         256.4        107.3        149.0         74.5          9.9         22.9          6.4    1.1    2.6
+ 25-30cm         126.4          6.1        120.3          6.1          0.0          0.0          0.0    0.0    1.0
+ 30-35cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 35-40cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 40-45cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 45-50cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 50-55cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 55-60cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 60-65cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 65-70cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 70-75cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 75-80cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 80-85cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 85-90cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 90-95cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 95+  cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+ SUM/AVG        1586.2        565.9       1020.3        322.4         98.8        144.7         35.7    0.9    2.7
+
+Year:    2030
+Species:   OC
+
+             TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA    MEAN   MEAN
+DBH CLASS      TOTAL      INFECTED    UNINFECTED     DMR 1-2      DMR 3-4      DMR 5-6     MORTALITY    DMR    DMI
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+  0- 5cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+  5-10cm         169.3         25.4        143.9         17.3          8.1          0.0          0.5    0.3    1.8
+ 10-15cm         283.2        140.5        142.7         82.5         33.5         24.5          8.9    1.3    2.6
+ 15-20cm         493.4        117.1        376.3         91.2         22.2          3.7          2.9    0.4    1.8
+ 20-25cm         383.9        270.4        113.5         59.1         92.2        119.1         30.6    2.7    3.8
+ 25-30cm         163.7         33.0        130.7         33.0          0.0          0.0          0.3    0.2    1.2
+ 30-35cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 35-40cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 40-45cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 45-50cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 50-55cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 55-60cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 60-65cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 65-70cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 70-75cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 75-80cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 80-85cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 85-90cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 90-95cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 95+  cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+ SUM/AVG        1493.5        586.5        907.0        283.1        156.0        147.4         43.2    1.1    2.9
+
+Year:    2040
+Species:   OC
+
+             TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA    MEAN   MEAN
+DBH CLASS      TOTAL      INFECTED    UNINFECTED     DMR 1-2      DMR 3-4      DMR 5-6     MORTALITY    DMR    DMI
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+  0- 5cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+  5-10cm         151.4         12.8        138.5          2.8         10.0          0.0          0.5    0.2    2.8
+ 10-15cm         370.7        125.5        245.2         72.1         38.5         14.8          6.5    0.8    2.4
+ 15-20cm         223.6         90.5        133.2         70.5         11.4          8.7          3.4    0.8    2.1
+ 20-25cm         584.5        367.5        217.0        162.7        114.4         90.4         31.0    2.0    3.1
+ 25-30cm          75.8         36.9         38.8         21.9          9.2          5.8          2.3    1.3    2.7
+ 30-35cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 35-40cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 40-45cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 45-50cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 50-55cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 55-60cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 60-65cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 65-70cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 70-75cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 75-80cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 80-85cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 85-90cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 90-95cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 95+  cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+ SUM/AVG        1406.0        633.2        772.8        330.0        183.5        119.7         43.7    1.3    2.8
+
+Year:    2050
+Species:   OC
+
+             TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA    MEAN   MEAN
+DBH CLASS      TOTAL      INFECTED    UNINFECTED     DMR 1-2      DMR 3-4      DMR 5-6     MORTALITY    DMR    DMI
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+  0- 5cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+  5-10cm          98.2         15.5         82.7          2.3         13.2          0.0          0.6    0.4    2.7
+ 10-15cm         408.3        159.0        249.3        109.9         34.5         14.5          6.0    0.8    2.1
+ 15-20cm         161.5        101.6         59.9         69.1         18.9         13.6          5.1    1.5    2.4
+ 20-25cm         604.0        338.0        266.1        146.4        120.2         71.4         25.0    1.7    3.0
+ 25-30cm          49.1         38.7         10.4          2.3         12.1         24.3          6.9    3.9    4.9
+ 30-35cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 35-40cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 40-45cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 45-50cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 50-55cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 55-60cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 60-65cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 65-70cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 70-75cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 75-80cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 80-85cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 85-90cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 90-95cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 95+  cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+ SUM/AVG        1321.2        652.8        668.4        330.0        198.8        123.9         43.8    1.4    2.8
+
+Year:    2060
+Species:   OC
+
+             TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA    MEAN   MEAN
+DBH CLASS      TOTAL      INFECTED    UNINFECTED     DMR 1-2      DMR 3-4      DMR 5-6     MORTALITY    DMR    DMI
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+  0- 5cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+  5-10cm         162.2         89.0         73.2         63.8         21.9          3.3          3.3    1.2    2.1
+ 10-15cm         303.3        124.0        179.2         95.1         24.9          4.1          3.3    0.8    2.1
+ 15-20cm         246.9        126.1        120.8         56.2         50.4         19.5          9.1    1.5    3.0
+ 20-25cm         437.7        270.5        167.2        120.8        103.7         46.0         16.8    1.6    2.6
+ 25-30cm          85.5         58.1         27.4          2.2         16.5         39.5         10.6    3.5    5.1
+ 30-35cm           3.2          3.2          0.0          0.0          0.0          3.2          0.7    6.0    6.0
+ 35-40cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 40-45cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 45-50cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 50-55cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 55-60cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 60-65cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 65-70cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 70-75cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 75-80cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 80-85cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 85-90cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 90-95cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 95+  cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+ SUM/AVG        1238.8        671.0        567.8        338.0        217.4        115.6         43.9    1.5    2.8
+
+Year:    2070
+Species:   OC
+
+             TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA    MEAN   MEAN
+DBH CLASS      TOTAL      INFECTED    UNINFECTED     DMR 1-2      DMR 3-4      DMR 5-6     MORTALITY    DMR    DMI
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+  0- 5cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+  5-10cm         219.0        122.4         96.6         60.5         38.9         23.0          8.1    1.6    2.9
+ 10-15cm         199.3         75.9        123.5         30.0         41.0          4.9          3.8    1.0    2.7
+ 15-20cm         301.6        177.3        124.3         99.3         38.7         39.4         11.2    1.7    2.8
+ 20-25cm         310.0        218.3         91.7        150.0         33.4         34.9         11.9    1.7    2.4
+ 25-30cm         116.5         77.5         39.0          4.2         36.8         36.5         10.3    2.9    4.3
+ 30-35cm           9.5          9.5          0.0          0.0          0.0          9.5          2.0    6.0    6.0
+ 35-40cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 40-45cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 45-50cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 50-55cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 55-60cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 60-65cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 65-70cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 70-75cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 75-80cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 80-85cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 85-90cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 90-95cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 95+  cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+ SUM/AVG        1156.0        680.9        475.1        344.0        188.7        148.2         47.4    1.7    2.9
+
+Year:    2080
+Species:   OC
+
+             TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA    MEAN   MEAN
+DBH CLASS      TOTAL      INFECTED    UNINFECTED     DMR 1-2      DMR 3-4      DMR 5-6     MORTALITY    DMR    DMI
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+  0- 5cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+  5-10cm         177.6        102.0         75.6         50.5         16.4         35.1          9.4    1.9    3.3
+ 10-15cm         217.3         93.0        124.4         14.3         74.3          4.5          6.6    1.4    3.3
+ 15-20cm         266.1        181.1         85.1         80.0         60.1         41.0         14.0    2.1    3.1
+ 20-25cm         199.8        110.2         89.6         50.8         45.2         14.2          5.5    1.4    2.6
+ 25-30cm         193.7        150.2         43.5         58.8         69.7         21.6          9.8    2.1    2.8
+ 30-35cm          19.1         19.1          0.0          0.0          0.0         19.1          4.0    6.0    6.0
+ 35-40cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 40-45cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 45-50cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 50-55cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 55-60cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 60-65cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 65-70cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 70-75cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 75-80cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 80-85cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 85-90cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 90-95cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 95+  cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+ SUM/AVG        1073.7        655.4        418.2        254.3        265.7        135.4         49.3    1.9    3.1
+
+Year:    2090
+Species:   OC
+
+             TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA     TREES/HA    MEAN   MEAN
+DBH CLASS      TOTAL      INFECTED    UNINFECTED     DMR 1-2      DMR 3-4      DMR 5-6     MORTALITY    DMR    DMI
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+  0- 5cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+  5-10cm         171.7        101.1         70.6         24.0         52.5         24.6          8.4    2.0    3.3
+ 10-15cm         273.8        137.8        136.1         39.3         62.1         36.4         13.9    1.8    3.6
+ 15-20cm         198.3        132.7         65.6         57.0         34.4         41.3         13.4    2.3    3.5
+ 20-25cm         142.2         87.8         54.5         37.9         43.5          6.4          4.5    1.7    2.8
+ 25-30cm         181.8        127.7         54.1         77.1         29.5         21.1          7.8    1.7    2.4
+ 30-35cm          16.1         16.1          0.0          0.0          3.2         12.9          2.9    5.4    5.4
+ 35-40cm           5.3          5.3          0.0          0.0          0.0          5.3          1.1    6.0    6.0
+ 40-45cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 45-50cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 50-55cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 55-60cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 60-65cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 65-70cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 70-75cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 75-80cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 80-85cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 85-90cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 90-95cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+ 95+  cm           0.0          0.0          0.0          0.0          0.0          0.0          0.0    0.0    0.0
+---------   ----------   ----------   ----------   ----------   ----------   ----------   ----------   ----   ----
+ SUM/AVG         989.3        608.4        380.9        235.3        225.2        147.9         51.9    2.0    3.2
+
+
+Structural statistics for stand: S248112                     MgmtID: NONE
+
+        ------------ Stratum 1 ------------ ------------ Stratum 2 ------------ ------------ Stratum 3 ------------
+     Rm       ---Height-- -Crown- -Major- C       ---Height-- -Crown- -Major- C       ---Height-- -Crown- -Major- C N Tot Struc
+Year Cd  DBH  Nom  Lg  Sm Bas Cov Sp1 Sp2 D  DBH  Nom  Lg  Sm Bas Cov Sp1 Sp2 D  DBH  Nom  Lg  Sm Bas Cov Sp1 Sp2 D S Cov Class
+---- -- ----- --- --- --- --- --- --- --- - ----- --- --- --- --- --- --- --- - ----- --- --- --- --- --- --- --- - - --- -----
+1990  0   9.5  57  74  10  26  59 OC  LW  2   1.1   2   4   2   1   2 LW  OC  0   0.0   0   0   0   0   0 --  --  0 1  60  1=SI
+1990  1   9.5  57  74  10  26  59 OC  LW  2   1.1   2   4   2   1   2 LW  OC  0   0.0   0   0   0   0   0 --  --  0 1  60  1=SI
+2000  0  52.5  52  75  17  25  83 OC  SE  2  12.8  10  11   7   4  22 OC  SE  1   0.0   0   0   0   0   0 --  --  0 2  86  6=OM
+2000  1  52.5  52  75  17  25  83 OC  SE  2  12.8  10  11   7   4  22 OC  SE  1   0.0   0   0   0   0   0 --  --  0 2  86  6=OM
+2010  0  69.4  46  75   9  23  86 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  86  5=OS
+2010  1  69.4  46  75   9  23  86 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  86  5=OS
+2020  0  69.1  47  75  11  23  85 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  85  5=OS
+2020  1  69.1  47  75  11  23  85 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  85  5=OS
+2030  0  78.7  43  76  13  24  84 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  84  5=OS
+2030  1  78.7  43  76  13  24  84 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  84  5=OS
+2040  0  70.4  47  76  13  24  83 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  83  5=OS
+2040  1  70.4  47  76  13  24  83 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  83  5=OS
+2050  0  79.9  44  76  13  25  82 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  82  5=OS
+2050  1  79.9  44  76  13  25  82 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  82  5=OS
+2060  0  80.5  44  77  13  25  81 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  81  5=OS
+2060  1  80.5  44  77  13  25  81 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  81  5=OS
+2070  0  84.7  42  77  13  26  80 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  80  5=OS
+2070  1  84.7  42  77  13  26  80 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  80  5=OS
+2080  0  85.2  42  77  13  26  78 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  78  5=OS
+2080  1  85.2  42  77  13  26  78 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  78  5=OS
+2090  0  85.8  42  77  13  27  77 OC  SE  2   0.0   0   0   0   0   0 --  --  0   0.0   0   0   0   0   0 --  --  0 1  77  5=OS

@@ -1,0 +1,6 @@
+library("rFVS")
+setwd(file.path(getwd(), "tests"))
+fvsLoad("FVSie")
+fvsSetCmdLine("--keywordfile=iet01.key")
+fvsRun()
+fvsUnload("FVSie")              
